@@ -4,15 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Hotel")
 public class Hotel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String city;
 	private String hotelName;
-	private Integer pricePerNight;
+	private int pricePerNight;
 
 	public Hotel() {
 		super();
